@@ -18,11 +18,6 @@ from NashvilleHousing;
 update NashvilleHousing
 set SaleDate = CONVERT(date, SaleDate) -- for some reason it is not working
 
---comment from the comments section:
-/*Not sure if this has been pointed out, but the reason the SaleDate column didn't "update" here 
-  is because UPDATE does not change data types. 
-  The table is actually updating, but the data type for the column SaleDate is still datetime.*/
-
 alter table NashvilleHousing
 add SaleDateConverted DATE
 
